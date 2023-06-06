@@ -2,7 +2,7 @@ import os
 import cv2
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split,GridSearchCV
 from sklearn.metrics import accuracy_score
 from sklearn.svm import SVC
 tumor_type = ["glioma_tumor", 'meningioma_tumor',"no_tumor",'pituitary_tumor']
