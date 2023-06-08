@@ -1,1 +1,20 @@
 
+body{
+    background-image: url(wallpaper.jpg);
+}
+.rh
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.container
+{
+    position: relative;
+    text-align: right;
+}
+form
+{
+    position: relative;
+    margin-top: 20px;
+}
