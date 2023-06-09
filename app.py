@@ -1,5 +1,5 @@
 from flask import Flask,render_template,request
-import rough
+import predictor
 app=Flask(__name__)
 @app.route('/')
 def index():
@@ -8,7 +8,7 @@ def index():
 def upload():
     if request.method=='POST':
         image=request.files['image']
-        result=rough.preprocess_image(image)
+        result=predictor.transformm(image)
     return(render_template('result.html',result))
 
 if __name__ =='__main__':
