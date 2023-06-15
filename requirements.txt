@@ -3,3 +3,5 @@ flask
 tensorflow 
 scikit-learn 
 opencv-python
+gunicorn
+
