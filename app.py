@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request
 import rough
 app = Flask(__name__)
-
+UPLOAD_FOLDER = 'uploads'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def index():
