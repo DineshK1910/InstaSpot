@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import pickle
-with open('mmodel.pkl', 'rb') as file:
+with open('Model.pkl', 'rb') as file:
     model = pickle.load(file)
 target_size = (150, 150)
 
