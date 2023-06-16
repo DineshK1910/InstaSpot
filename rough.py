@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 import pickle
 import tensorflow as tf
-with open('Model.pkl', 'rb') as file:
-    model = pickle.load(file)
+#with open('Model.pkl', 'rb') as file:
+#    model = pickle.load(file)
 new_model = tf.keras.models.load_model('my_model.h5')
 target_size = (150, 150)
 
