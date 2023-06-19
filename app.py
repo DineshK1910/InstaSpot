@@ -14,7 +14,7 @@ def index():
 def upload():
     if request.method == 'POST':
         image = request.files['image']
-        image = cv2.imread(image_path)
+        image = cv2.imread(image)
         #file_path = 'uploads/' + image.filename
         #image.save(file_path)
         #print(file_path)
