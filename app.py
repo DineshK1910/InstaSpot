@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import rough
+import cv2
 app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -13,10 +14,11 @@ def index():
 def upload():
     if request.method == 'POST':
         image = request.files['image']
-        file_path = 'uploads/' + image.filename
-        image.save(file_path)
-        print(file_path)
-        result = rough.preprocess_image(file_path, target_size=(150, 150))
+        image = cv2.imread(image_path)
+        #file_path = 'uploads/' + image.filename
+        #image.save(file_path)
+        #print(file_path)
+        result = rough.preprocess_image(image, target_size=(150, 150))
         return (render_template('result.html', result=result))
 
 
