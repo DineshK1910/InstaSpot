@@ -8,8 +8,8 @@ new_model = tf.keras.models.load_model('my_model.h5')
 target_size = (150, 150)
 
 
-def preprocess_image(image_path, target_size):
-    image = cv2.imread(image_path)
+def preprocess_image(image, target_size):
+    
     image = cv2.resize(image, target_size)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     image = image.astype(np.float32) / 255.0
