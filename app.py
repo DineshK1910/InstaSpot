@@ -14,10 +14,10 @@ def index():
 def upload():
     if request.method == 'POST':
         image = request.files['image']
-        file_path = 'uploads/' + image.filename
+        file_path = './uploads/' + image.filename
         image.save(file_path)
         #print(file_path)
-        result = rough.preprocess_image(image, target_size=(150, 150))
+        result = rough.preprocess_image(file_path, target_size=(150, 150))
         return (render_template('result.html', result=result))
 
 
